@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "mocha",
-    "build": "browserify ./js6/export.js -o ../dist/js6.js&&browserify ./pp6/ui6/export.js -o ./dist/ui6.js && sass ./pp6/ui6/css/export.scss ./dist/ui6.css"
+    "build": "browserify ./js6/export.js -o ../dist/js6.js&&browserify ./pp6/ui6/js/export.js -o ./dist/ui6.js && sass ./pp6/ui6/css/export.scss ./dist/ui6.css"
   },
   "bin": {
     "cc6": "cc6.js"

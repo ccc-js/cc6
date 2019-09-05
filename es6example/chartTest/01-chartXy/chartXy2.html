@@ -1,0 +1,23 @@
+<html>
+<head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.8/c3.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.11.0/d3.js" integrity="sha256-cWwi30eyRTyVagkLLAwXp92jxARPpGH3u+5Vr0UJtGQ=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.8/c3.js" integrity="sha256-sLC0xzW0Rtk23C4Cflyf0kh2bA6v4xVPlYBMJR1uuw8=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="chart"></div>
+  <script>
+var chart = c3.generate({
+  bindto: '#chart',
+  data: {
+    x: 'x',
+    columns: [
+        ['x',     0, 1, 2, 3, 4, 5],
+        ['data1', 0, 1, 2, 3, 4, 5],
+    ]
+  }
+});
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+<head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.8/c3.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.11.0/d3.js" integrity="sha256-cWwi30eyRTyVagkLLAwXp92jxARPpGH3u+5Vr0UJtGQ=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.8/c3.js" integrity="sha256-sLC0xzW0Rtk23C4Cflyf0kh2bA6v4xVPlYBMJR1uuw8=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="chart1"></div>
+  <div id="chart2"></div>
+  <script type="module">
+    import { curve } from './ui6.mjs';
+    let chart1 = curve('#chart1', 'data1', (x)=>x, 0, 5, 1)
+    let chart2 = curve('#chart2', 'data2', Math.sin, 0, 9, 0.5)
+  </script>
+</body>
+</html>

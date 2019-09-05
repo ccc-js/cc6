@@ -1,0 +1,45 @@
+<html>
+<head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.8/c3.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.11.0/d3.js" integrity="sha256-cWwi30eyRTyVagkLLAwXp92jxARPpGH3u+5Vr0UJtGQ=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.8/c3.js" integrity="sha256-sLC0xzW0Rtk23C4Cflyf0kh2bA6v4xVPlYBMJR1uuw8=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="chart1"></div>
+  <div id="chart2"></div>
+  <script>
+let ui6 = {}, js6 = {}
+
+js6.steps = function (from, to, step = 1) {
+  var a = []
+  for (var t = from; t <= to; t += step) {
+    a.push(t)
+  }
+  return a
+}
+
+js6.curveData = function (f, from = -10, to = 10, step = 0.1) {
+  var x = js6.steps(from, to, step)
+  var y = x.map(f)
+  console.log('curveData:{x,y}=', x, y)
+  return {type: 'curve', x: x, y: y}
+}
+
+ui6.curve = function (id, label, f, from, to, step) {
+  let {x, y} = js6.curveData(f, from, to, step)
+  let g = {bindto: id, data: { 
+    x: 'x', 
+    columns: [ 
+      ['x'].concat(x), 
+      [label].concat(y)
+  ]}}
+  console.log('g=', g)
+  return c3.generate(g)
+}
+
+let chart1 = ui6.curve('#chart1', 'data1', (x)=>x, 0, 5, 1)
+let chart2 = ui6.curve('#chart2', 'data2', Math.sin, 0, 9, 0.5)
+
+  </script>
+</body>
+</html>
