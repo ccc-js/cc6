@@ -1,0 +1,46 @@
+{
+  "name": "cc6",
+  "version": "0.0.1",
+  "description": "code of ccc",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "mocha",
+    "build": "browserify ./js6/export.js -o ../dist/js6.js&&browserify ./pp6/ui6/export.js -o ./dist/ui6.js && sass ./pp6/ui6/css/export.scss ./dist/ui6.css"
+  },
+  "bin": {
+    "cc6": "cc6.js"
+  },
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccc-js/cc6.git"
+  },
+  "keywords": [
+    "Web",
+    "Server",
+    "Koa",
+    "MongoDB",
+    "Database",
+    "Cordova",
+    "Electron",
+    "Node.js"
+  ],
+  "author": "ccckmit",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ccc-js/cc6/issues"
+  },
+  "homepage": "https://github.com/ccc-js/cc6#readme",
+  "dependencies": {
+    "jsox": "^1.1.114",
+    "koa": "^2.8.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "yargs": "^13.2.4"
+  }
+}

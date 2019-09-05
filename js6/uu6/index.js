@@ -1,0 +1,1 @@
+module.exports = require('./src/uu6')

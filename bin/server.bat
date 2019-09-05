@@ -1,0 +1,1 @@
+node cc6 server --port=3000 --root=../../../course/book/

@@ -1,0 +1,42 @@
+{
+  "name": "pp6",
+  "version": "0.1.2",
+  "description": "6th Generation of Portable Platform",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "mocha",
+    "build": "browserify ./ui6/js/ui6export.js -o ./dist/ui6.js && sass ./ui6/css/export.scss ./dist/ui6.css"
+  },
+  "bin": {
+    "pp6": "pp6.js"
+  },
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccc-js/pp6.git"
+  },
+  "keywords": [
+    "Web",
+    "Server",
+    "Koa",
+    "MongoDB",
+    "Database",
+    "Cordova",
+    "Electron",
+    "Node.js"
+  ],
+  "author": "ccckmit",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ccc-js/pp6/issues"
+  },
+  "homepage": "https://github.com/ccc-js/pp6#readme",
+  "dependencies": {
+    "js6": "^0.2.0",
+    "jsox": "^1.1.114",
+    "yargs": "^13.2.4"
+  }
+}

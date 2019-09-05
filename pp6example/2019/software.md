@@ -1,0 +1,1 @@
+https://blog.niclin.tw/2019/08/26/how-to-be-a-bad-developer/

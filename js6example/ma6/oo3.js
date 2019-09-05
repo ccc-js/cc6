@@ -1,0 +1,16 @@
+const {OO} = require('../../js6/ma6')
+const {oo} = OO
+
+console.log('==================matrix============')
+// let m = oo({r:[1,2,3,4], shape:[2,2]})
+let m = oo({r:[1,2,3,3,2,1], shape:[2,3]})
+console.log('m=%s', m)
+let mt = m.transpose()
+console.log('mt=%s', mt)
+let mm = m.mdot(mt)
+console.log('mm=%s', mm)
+let svd = mt.svd()
+console.log('mt.svd=%j', svd)
+console.log('mm.inv()=%s', mm.inv())
+console.log('mm.mdot(mm.inv())=%s', mm.mdot(mm.inv()))
+console.log('mm.det()=%d', mm.det())

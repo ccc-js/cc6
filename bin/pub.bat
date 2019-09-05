@@ -1,0 +1,1 @@
+node cc6 pub --path=../../course/book
